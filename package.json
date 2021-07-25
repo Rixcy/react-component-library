@@ -12,7 +12,8 @@
     "dev": "vite",
     "lint": "prettier --write . --ignore-unknown",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*": "yarn lint"

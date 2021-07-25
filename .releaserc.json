@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/react-component-library.es.js",
+            "label": "ES distribution (import)"
+          },
+          {
+            "path": "dist/react-component-library.umd.js",
+            "label": "JS distribution (require)"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["dist/**/*.{js,css}", "docs", "package.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}

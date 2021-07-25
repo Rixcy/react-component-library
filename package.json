@@ -1,39 +1,44 @@
 {
-	"name": "react-component-library",
-	"version": "0.0.0",
-	"exports": {
-		".": {
-			"import": "./dist/react-component-library.es.js",
-			"require": "./dist/react-component-library.umd.js"
-		}
-	},
-	"scripts": {
-		"commit": "git-cz",
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"serve": "vite preview"
-	},
-	"dependencies": {
-		"react": "^17.0.0",
-		"react-dom": "^17.0.0"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^12.1.4",
-		"@commitlint/config-conventional": "^12.1.4",
-		"@commitlint/prompt": "^12.1.4",
-		"@types/node": "^16.4.0",
-		"@types/react": "^17.0.0",
-		"@types/react-dom": "^17.0.0",
-		"@vitejs/plugin-react-refresh": "^1.3.1",
-		"commitizen": "^4.2.4",
-		"cz-conventional-changelog": "^3.3.0",
-		"husky": "^7.0.1",
-		"typescript": "^4.3.2",
-		"vite": "^2.4.3"
-	}
+  "name": "react-component-library",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "import": "./dist/react-component-library.es.js",
+      "require": "./dist/react-component-library.umd.js"
+    }
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "dev": "vite",
+    "lint": "prettier --write . --ignore-unknown",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "lint-staged": {
+    "**/*": "yarn lint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/prompt": "^12.1.4",
+    "@types/node": "^16.4.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.1",
+    "prettier": "2.3.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.3"
+  }
 }

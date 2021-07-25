@@ -1,11 +1,11 @@
-import * as React from 'react'
+import * as React from "react"
 
 export type ExampleProps = {
-	children: React.ReactNode
+  children: React.ReactNode
 }
 
 export const Example: React.VFC<ExampleProps> = (props) => {
-	const { children } = props
+  const { children } = props
 
-	return <div>{children}</div>
+  return <div>{children}</div>
 }
